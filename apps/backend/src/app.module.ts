@@ -7,6 +7,7 @@ import configuration from './common/config/configuration.js';
 import { McpServerEntity } from './servers/entities/mcp-server.entity.js';
 import { RequestLogEntity } from './request-logs/entities/request-log.entity.js';
 import { CommonModule } from './common/common.module.js';
+import { AuthModule } from './auth/auth.module.js';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor.js';
 
 @Module({
@@ -50,6 +51,7 @@ import { LoggingInterceptor } from './common/interceptors/logging.interceptor.js
       }),
     }),
     CommonModule,
+    AuthModule,
   ],
   providers: [
     {
