@@ -8,6 +8,11 @@ import { McpServerEntity } from './servers/entities/mcp-server.entity.js';
 import { RequestLogEntity } from './request-logs/entities/request-log.entity.js';
 import { CommonModule } from './common/common.module.js';
 import { AuthModule } from './auth/auth.module.js';
+import { ServersModule } from './servers/servers.module.js';
+import { MetricsModule } from './metrics/metrics.module.js';
+import { RequestLogsModule } from './request-logs/request-logs.module.js';
+import { GatewayModule } from './gateway/gateway.module.js';
+import { HealthModule } from './health/health.module.js';
 import { LoggingInterceptor } from './common/interceptors/logging.interceptor.js';
 
 @Module({
@@ -52,6 +57,11 @@ import { LoggingInterceptor } from './common/interceptors/logging.interceptor.js
     }),
     CommonModule,
     AuthModule,
+    ServersModule,
+    MetricsModule,
+    RequestLogsModule,
+    GatewayModule,
+    HealthModule,
   ],
   providers: [
     {
